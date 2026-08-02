@@ -1,0 +1,12 @@
+.movie-list {
+  display: grid; 
+  gap: 20px; 
+  padding: 20px; 
+}
+
+.movie-card {
+  border: 1px solid #ccc; 
+  border-radius:  8px;
+  padding: 10px; 
+  text-align: center; 
+}
