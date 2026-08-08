@@ -1,12 +1,33 @@
-.movie-list {
+.app{
   display: grid; 
-  gap: 20px; 
-  padding: 20px; 
+  grid-template-rows: 80px auto; 
+  
+}
+.navbar {
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px; 
+    border-bottom: 1px solid white; 
 }
 
-.movie-card {
-  border: 1px solid #ccc; 
-  border-radius:  8px;
-  padding: 10px; 
-  text-align: center; 
+.navbar > h1 {
+  font-size: 30px;
+  color: brown; 
 }
+
+.navbar_links {
+  display: flex;
+  align-items: center;  
+}
+
+.navbar_links > a {
+  display: flex; 
+  align-items: 20px;
+  font-size: 20px;
+  font-weight: 500;
+  color:black; 
+  text-decoration: none; 
+  padding: 0 15px; 
+}
+
