@@ -1,13 +1,18 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import MovieCard from "./MovieCard";
 
 export default function MovieList() {
+    const [movies, setMovies] = useState([])
 
 useEffect(() => {
-    fetch("https://api.themoviedb.org/3/movie/popular?api_key=4f2a4b78035923567997eade8e69b198")
-}, []) 
+  fetchMovies()
+}, []); 
 
-
+const fetchMovies = async() => {
+ const response = await fetch("https://api.themoviedb.org/3/movie/popular?api_key=4f2a4b78035923567997eade8e69b198")
+  const data = await response.json()
+  setMovies(data.results)
+}
     return (
     
         <section className="movie_list">
@@ -38,7 +43,9 @@ useEffect(() => {
             </header>
             {/* MOVIE CARD  */}
             <div className="movie_cards">
-                <MovieCard /> 
+                {
+                    movies.map(movie => <MovieCard key={movie.id} movie={movie}/> )
+                }
             </div>
 
         
