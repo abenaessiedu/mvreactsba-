@@ -23,11 +23,11 @@ const fetchMovies = async() => {
                 {/* FILTERING  */}
                 <div className="align_center movie_list_fs">
                     {/* STAR SYSTEM  */}
-                    <ul className="align_center movie_filter">
+                    {/* <ul className="align_center movie_filter">
                         <li className="movie_filter_item"> 8+ Star </li>
                         <li className="movie_filter_item"> 7+ Star </li>
                         <li className="movie_filter_item"> 6+ Star </li>
-                    </ul>
+                    </ul> */}
                     {/* SORTING   */}
                     <select name="" id="" className="movie_sorting">
                         <option value=""> SortBy </option>
